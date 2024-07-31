@@ -29,7 +29,7 @@ print_int(args, characters_printed);
 break;
 default:
 write(1, *fpointer, 1);
-characters_printed++;
+(*characters_printed)++;
 break;
 }
 }

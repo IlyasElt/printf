@@ -13,6 +13,12 @@ int _printf(const char *format, ...)
 const char *fpointer;
 int characters_printed = 0;
 va_list args;
+
+if (format == NULL)
+{
+return (-1);
+}
+
 va_start(args, format);
 for (fpointer = format; *fpointer != '\0'; fpointer++)
 {
