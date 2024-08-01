@@ -27,13 +27,17 @@ if (*fpointer == '%')
 fpointer++;
 if (*fpointer == '\0')
 {
-break;
+va_end(args);
+return (-1);
 }
 choose_specifier(&fpointer, args, &characters_printed);
 }
 else
 {
-write(1, fpointer, 1);
+if (write(1, fpointer, 1) == -1)
+{
+return (-1);
+}
 characters_printed++;
 }
 }

@@ -28,7 +28,12 @@ case 'd':
 print_int(args, characters_printed);
 break;
 default:
-write(1, *fpointer, 1);
+write(1, "%", 1);
+(*characters_printed)++;
+if (write(1, *fpointer, 1) == -1)
+{
+return;
+}
 (*characters_printed)++;
 break;
 }
