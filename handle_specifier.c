@@ -30,6 +30,18 @@ break;
 case 'b':
 print_unsignedint_to_binary(args, characters_printed);
 break;
+case 'u':
+print_unsignedint(args, characters_printed);
+break;
+case 'o':
+print_unsignedint_to_octal(args, characters_printed);
+break;
+case 'x':
+print_unsignedint_to_hexadecimal(args, characters_printed, "0123456789abcdef");
+break;
+case 'X':
+print_unsignedint_to_hexadecimal(args, characters_printed, "0123456789ABCDEF");
+break;
 default:
 write(1, "%", 1);
 (*characters_printed)++;
