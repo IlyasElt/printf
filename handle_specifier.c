@@ -27,6 +27,9 @@ case 'i':
 case 'd':
 print_int(args, characters_printed);
 break;
+case 'b':
+print_unsignedint_to_binary(args, characters_printed);
+break;
 default:
 write(1, "%", 1);
 (*characters_printed)++;
